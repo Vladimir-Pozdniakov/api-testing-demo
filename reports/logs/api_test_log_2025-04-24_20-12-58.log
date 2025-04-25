@@ -1,0 +1,149 @@
+Test session started at 2025-04-24 20:12:58
+
+-----
+Date: 2025-04-24 20:12:58
+Test: tests/author_api_test.py::TestAuthorAPI::test_get_all_authors (call)
+Function: _request
+Request method: GET
+Request URL: http://localhost:3000/author
+Request headers: {'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json'}
+Request data: None
+
+Date: 2025-04-24 20:12:58
+Response code: 200
+Response text: {
+  "authors": [
+    "Bob Willett",
+    "Emily Dickinson",
+    "Ernest Dowson"
+  ]
+}
+Response headers: {'Date': 'Thu, 24 Apr 2025 17:12:58 GMT', 'Connection': 'close', 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Content-Length': '84', 'X-Content-Type-Options': 'nosniff'}
+
+-----
+
+
+-----
+Date: 2025-04-24 20:12:58
+Test: tests/author_api_test.py::TestAuthorAPI::test_get_all_author_poems (call)
+Function: _request
+Request method: GET
+Request URL: http://localhost:3000/author/Emily%20Dickinson
+Request headers: {'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json'}
+Request data: None
+
+Date: 2025-04-24 20:12:58
+Response code: 200
+Response text: [
+  {
+    "title": "Bereavement in their death to feel",
+    "author": "Emily Dickinson",
+    "lines": [
+      "Bereavement in their death to feel",
+      "Whom We have never seen --",
+      "A Vital Kinsmanship import",
+      "Our Soul and theirs -- between --",
+      "",
+      "For Stranger -- Strangers do not mourn --",
+      "There be Immortal friends",
+      "Whom Death see first -- 'tis news of this",
+      "That paralyze Ourselves --",
+      "",
+      "Who, vital only to Our Thought --",
+      "Such Presence bear away",
+      "In dying -- 'tis as if Our Souls",
+      "Absconded -- suddenly --"
+    ],
+    "linecount": "12"
+  },
+  {
+    "title": "Said Death to Passion",
+    "author": "Emily Dickinson",
+    "lines": [
+      "Said Death to Passion",
+      "\"Give of thine an Acre unto me.\"",
+      "Said Passion, through contracting Breaths",
+      "\"A Thousand Times Thee Nay.\"",
+      "",
+      "Bore Death from Passion",
+      "All His East",
+      "He -- sovereign as the Sun",
+      "Resituated in the West",
+      "And the Debate was done."
+    ],
+    "linecount": "9"
+  }
+]
+Response headers: {'Date': 'Thu, 24 Apr 2025 17:12:58 GMT', 'Connection': 'close', 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Content-Length': '1097', 'X-Content-Type-Options': 'nosniff'}
+
+-----
+
+
+-----
+Date: 2025-04-24 20:12:58
+Test: tests/title_api_test.py::TestTitleAPI::test_get_all_titles (call)
+Function: _request
+Request method: GET
+Request URL: http://localhost:3000/title
+Request headers: {'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json'}
+Request data: None
+
+Date: 2025-04-24 20:12:58
+Response code: 200
+Response text: {
+  "titles": [
+    "A Soap Opera (How",
+    "Bereavement in their death to feel",
+    "Said Death to Passion",
+    "The Moon Maiden's Song"
+  ]
+}
+Response headers: {'Date': 'Thu, 24 Apr 2025 17:12:58 GMT', 'Connection': 'close', 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Content-Length': '146', 'X-Content-Type-Options': 'nosniff'}
+
+-----
+
+
+-----
+Date: 2025-04-24 20:12:58
+Test: tests/title_api_test.py::TestTitleAPI::test_get_poem_by_full_title_match (call)
+Function: _request
+Request method: GET
+Request URL: http://localhost:3000/title/The%20Moon%20Maiden's%20Song
+Request headers: {'User-Agent': 'python-requests/2.32.3', 'Accept-Encoding': 'gzip, deflate', 'Accept': 'application/json', 'Connection': 'keep-alive', 'Content-Type': 'application/json'}
+Request data: None
+
+Date: 2025-04-24 20:12:58
+Response code: 200
+Response text: [
+  {
+    "title": "The Moon Maiden's Song",
+    "author": "Ernest Dowson",
+    "lines": [
+      "Sleep! Cast thy canopy",
+      "   Over this sleeper's brain,",
+      "Dim grow his memory,",
+      "   When he wake again.",
+      "",
+      "Love stays a summer night,",
+      "   Till lights of morning come;",
+      "Then takes her winged flight",
+      "   Back to her starry home.",
+      "",
+      "Sleep! Yet thy days are mine;",
+      "   Love's seal is over thee:",
+      "Far though my ways from thine,",
+      "   Dim though thy memory.",
+      "",
+      "Love stays a summer night,",
+      "   Till lights of morning come;",
+      "Then takes her winged flight",
+      "   Back to her starry home."
+    ],
+    "linecount": "16"
+  }
+]
+Response headers: {'Date': 'Thu, 24 Apr 2025 17:12:58 GMT', 'Connection': 'close', 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*', 'Content-Length': '743', 'X-Content-Type-Options': 'nosniff'}
+
+-----
+
+Test session ended at 2025-04-24 20:12:58
